@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 13em;
+}
+.inner-cont {
+  width: 40%;
+  padding: 2em;
+  box-shadow: 5px 10px 8px #888888;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 0.7px solid;
+}
+p {
+  font-size: x-large;
+}
+input {
+  padding: 1em;
+}
+button {
+  margin-top: 1em;
+  padding: 1em;
+  cursor: pointer;
+}
+.output {
+  width: 70%;
+  padding: 0.6em;
+  height: auto;
+}
