@@ -1,6 +1,7 @@
 import "./app.css";
 import axios from "axios";
 import { useState } from "react";
+import sideImage from "./assets/Microsites-amico.svg";
 
 function App() {
   const [text, setText] = useState("");
@@ -21,22 +22,29 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <div className="inner-cont">
-        <p>Enter your text</p>
-        <input
-          type="text"
-          name="text"
-          id=""
-          placeholder="Text"
-          value={text}
-          onChange={(e) => {
-            setText(e.target.value);
-          }}
-        />
-        <button onClick={generate}>Generate</button>
-        <p>Output</p>
-        <div className="output">{data}</div>
+    <div>
+      <div className="navbar">
+        <div id="my">My</div>
+        <div id="gpt">GPT</div>
+      </div>
+      <div className="container">
+        <div className="inner-cont">
+          <p>Enter your text</p>
+          <input
+            type="text"
+            name="text"
+            id=""
+            placeholder="Text"
+            value={text}
+            onChange={(e) => {
+              setText(e.target.value);
+            }}
+          />
+          <button onClick={generate}>Generate</button>
+          <p>Output</p>
+          <div className="output">{data}</div>
+        </div>
+        <img src={sideImage} alt="image" />
       </div>
     </div>
   );
