@@ -3,16 +3,18 @@ import axios from "axios";
 import { useState } from "react";
 import sideImage from "./assets/Microsites-amico.svg";
 
+
+
 function App() {
   const [text, setText] = useState("");
   const [data, setData] = useState("");
 
   async function generate() {
     const data = await axios
-      .get("some url", text)
+      .post("http://127.0.0.1:5000/generate_text", {"text": text})
       .then((res) => {
-        console.log(res);
-        setData(res);
+        console.log(res.data.generated_text.generated_text);
+        setData(res.data.generated_text.generated_text);
       })
       .catch((error) => {
         console.log(error);
